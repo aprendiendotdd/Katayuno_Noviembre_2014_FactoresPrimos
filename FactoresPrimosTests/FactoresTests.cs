@@ -38,6 +38,11 @@ namespace FactoresPrimosTests
     public void ReturnListWith_2_2_WhenNumberIsFour() {
       Assert.AreEqual(new List<int>() { 2, 2 }, new FactoresPrimos.Factores().Game(4));
     }
-    
+
+    [Test]
+    public void ReturnListWith_2_2_3WhenNumberIsTwelve()
+    {
+      Assert.AreEqual(new List<int>() { 2, 2, 3 }, new FactoresPrimos.Factores().Game(12));
+    }
   }
 }
