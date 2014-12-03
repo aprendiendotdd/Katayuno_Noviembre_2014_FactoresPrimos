@@ -7,5 +7,9 @@ namespace FactoresPrimos
 {
   public class Factores
   {
+    public static object Game(int number)
+    {
+      throw new ArgumentException("numeros negativos no permitidos");
+    }
   }
 }
