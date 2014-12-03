@@ -14,8 +14,11 @@ namespace FactoresPrimos
       if (number == 0) 
         throw new ArgumentException("numero cero no permitido");
       var list = new List<int>();
-      return list;
+
+      if (Enumerable.Range(1, number).Where(x => number % x == 0).Count() == 2)
+        list.Add(number);
       
+      return list;
     }
   }
 }
