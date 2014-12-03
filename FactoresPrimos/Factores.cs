@@ -9,7 +9,10 @@ namespace FactoresPrimos
   {
     public static object Game(int number)
     {
-      throw new ArgumentException("numeros negativos no permitidos");
+      if (number < 0)
+        throw new ArgumentException("numeros negativos no permitidos");
+      throw new ArgumentException("numero cero no permitido");
+      
     }
   }
 }
