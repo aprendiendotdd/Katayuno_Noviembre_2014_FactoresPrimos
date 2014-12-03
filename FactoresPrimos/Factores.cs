@@ -7,11 +7,14 @@ namespace FactoresPrimos
 {
   public class Factores
   {
-    public static object Game(int number)
+    public List<int> Game(int number)
     {
       if (number < 0)
         throw new ArgumentException("numeros negativos no permitidos");
-      throw new ArgumentException("numero cero no permitido");
+      if (number == 0) 
+        throw new ArgumentException("numero cero no permitido");
+      var list = new List<int>();
+      return list;
       
     }
   }

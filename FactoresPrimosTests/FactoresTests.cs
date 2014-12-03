@@ -11,14 +11,19 @@ namespace FactoresPrimosTests
   {
     [Test]
     public void ReturnExceptionWhenNegativeNumber() {
-      var exception = Assert.Throws<ArgumentException>(() => FactoresPrimos.Factores.Game(-1));
+      var exception = Assert.Throws<ArgumentException>(() => new FactoresPrimos.Factores().Game(-1));
       Assert.That(exception, Has.Message.EqualTo("numeros negativos no permitidos"));
     }
 
     [Test]
     public void ReturnExceptionWhenZeroNumber() {
-      var exception = Assert.Throws<ArgumentException>(() => FactoresPrimos.Factores.Game(0));
+      var exception = Assert.Throws<ArgumentException>(() => new FactoresPrimos.Factores().Game(0));
       Assert.That(exception, Has.Message.EqualTo("numero cero no permitido"));
+    }
+
+    [Test]
+    public void ReturnEmptyListWhenNumberOne() {
+      Assert.AreEqual(new List<int>() { }, new FactoresPrimos.Factores().Game(1));
     }
   }
 }
