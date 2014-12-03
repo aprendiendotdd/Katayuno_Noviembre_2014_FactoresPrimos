@@ -44,5 +44,11 @@ namespace FactoresPrimosTests
     {
       Assert.AreEqual(new List<int>() { 2, 2, 3 }, new FactoresPrimos.Factores().Game(12));
     }
+
+    [Test]
+    public void ReturnListWith_5_41_41WhenNumberIs8405()
+    {
+      Assert.AreEqual(new List<int>() { 5, 41, 41 }, new FactoresPrimos.Factores().Game(8405));
+    }
   }
 }
